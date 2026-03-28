@@ -166,8 +166,8 @@ body {
 /* Interactive Badge Fix */
 .badge-fix {
     position: absolute;
-    bottom: -1rem; /* Lowered significantly as requested */
-    left: -2rem;
+    bottom: 6rem; /* Raised up as requested (higher than -1rem or 1.5rem) */
+    left: -3rem;
     z-index: 30;
 }
 
@@ -256,7 +256,7 @@ body {
     }
     
     .badge-fix {
-        bottom: -2.5rem;
+        bottom: 2rem; /* Raised on mobile as well */
         left: 0;
         right: 0;
         margin: 0 auto;
