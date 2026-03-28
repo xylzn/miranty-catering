@@ -210,7 +210,8 @@ body {
     max-width: 850px;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Contain children */
+    overflow-y: scroll;
+    scrollbar-width:none; /* Contain children */
     border-radius: 2.5rem;
     background: white;
 }

@@ -111,8 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         menuModal.classList.remove('hidden');
         setTimeout(() => menuModal.classList.add('active'), 10);
-        document.body.classList.add('overflow-hidden');
-    };
+        };
 
     menuItems.forEach(item => {
         item.addEventListener('click', () => {
@@ -125,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
         menuModal.classList.remove('active');
         setTimeout(() => {
             menuModal.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
         }, 500);
     };
 
