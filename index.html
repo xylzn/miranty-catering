@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miranty Catering | Jasa Boga Premium Bandung Sejak 1991</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- AOS Library for Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#E5C158',
+                            DEFAULT: '#C5A021',
+                            dark: '#A0811A',
+                        },
+                        premium: {
+                            dark: '#0F172A',
+                            light: '#F8FAFC',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-premium-light text-premium-dark font-sans overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center text-white font-serif text-xl font-bold">M</div>
+                <span class="font-serif text-xl font-bold tracking-tight">Miranty <span class="text-gold">Catering</span></span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-8 items-center font-medium text-sm tracking-wide">
+                <a href="#home" class="hover:text-gold transition-colors">BERANDA</a>
+                <a href="#about" class="hover:text-gold transition-colors">TENTANG KAMI</a>
+                <a href="#services" class="hover:text-gold transition-colors">LAYANAN</a>
+                <a href="#menu" class="hover:text-gold transition-colors">MENU</a>
+                <a href="#contact" class="px-5 py-2 bg-gold text-white rounded-full hover:bg-gold-dark transition-all shadow-lg shadow-gold/20">KONTAK</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-2xl" id="mobile-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <span class="text-gold font-semibold tracking-[0.2em] text-sm uppercase mb-4 block">Established 1991</span>
+                <h1 class="font-serif text-5xl md:text-7xl leading-tight mb-6">Cita Rasa <br><span class="italic text-gold">Legendaris</span> di Bandung</h1>
+                <p class="text-gray-600 text-lg mb-8 max-w-lg leading-relaxed">
+                    Lebih dari 30 tahun menghadirkan kelezatan konsisten dan layanan responsif untuk setiap momen berharga Anda. Dari acara intim hingga perayaan megah.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="px-8 py-4 bg-premium-dark text-white rounded-lg hover:bg-black transition-all shadow-xl">Lihat Paket</a>
+                    <a href="#contact" class="px-8 py-4 border-2 border-premium-dark text-premium-dark rounded-lg hover:bg-premium-dark hover:text-white transition-all">Hubungi Kami</a>
+                </div>
+            </div>
+            <div class="relative" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-gold/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-gold/20 rounded-full blur-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1000&auto=format&fit=crop" alt="Premium Catering" class="rounded-2xl shadow-2xl relative z-10 w-full object-cover aspect-[4/5]">
+                <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-6 rounded-xl z-20 shadow-lg border border-white/20">
+                    <div class="flex gap-4 items-center">
+                        <div class="text-gold text-3xl font-serif font-bold">30+</div>
+                        <div class="text-sm font-medium leading-tight">Tahun Pengalaman <br><span class="text-gray-500 font-normal text-xs">Melayani Ribuan Acara</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2 grid grid-cols-2 gap-4" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="https://images.unsplash.com/photo-1547573854-74d2a71d0826?q=80&w=600&auto=format&fit=crop" alt="History 1" class="rounded-lg shadow-lg mt-8">
+                    <img src="https://images.unsplash.com/photo-1532634922-8fe0b757fb13?q=80&w=600&auto=format&fit=crop" alt="History 2" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+                    <h2 class="font-serif text-4xl mb-6">Warisan Rasa CV. Miranty</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Berawal dari tahun 1991, kami memulai perjalanan sebagai katering rumahan yang melayani acara-acara kecil perorangan. Kepercayaan pelanggan terhadap kualitas rasa kami membawa CV. Miranty berkembang pesat.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Kini, kami telah berevolusi menjadi penyedia katering skala besar yang dipercaya oleh instansi pemerintah (Government Catering), sekolah (School Catering), hingga ribuan pasangan pengantin di Bandung.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 bg-gold/10 text-gold rounded-lg flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Sangat Responsif</h4>
+                                <p class="text-sm text-gray-500">Layanan cepat tanggap untuk setiap permintaan Anda.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 bg-gold/10 text-gold rounded-lg flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 15 2 2 4-4"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect><path d="M6 10h.01"></path><path d="M6 14h.01"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Harga Kompetitif</h4>
+                                <p class="text-sm text-gray-500">Kualitas premium dengan harga yang sangat bersaing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-premium-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold font-semibold tracking-[0.2em] text-sm uppercase mb-4 block">Paket Layanan</span>
+                <h2 class="font-serif text-4xl">Pilihan Sempurna untuk Setiap Acara</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Wedding Packages -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-premium-dark text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a10 10 0 1 0 20 0 10 10 0 1 0-20 0Z"></path><path d="M12 19c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6Z"></path><path d="m19 2 2 2"></path><path d="m21 2-2 2"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4">Wedding Packages</h3>
+                    <ul class="space-y-4 mb-8 text-gray-600">
+                        <li class="flex justify-between items-center">
+                            <span>Intimate (100 pax)</span>
+                            <span class="font-bold text-premium-dark text-sm">Rp18.000.000</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Wedding Warden</span>
+                            <span class="font-bold text-premium-dark text-sm">Rp144.500/pax</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Paket Pine/Akasia</span>
+                            <span class="font-bold text-premium-dark text-sm">Mulai Rp72.500</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-gold font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform">Pesan Sekarang <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+                </div>
+
+                <!-- Corporate & Government -->
+                <div class="bg-premium-dark text-white p-8 rounded-2xl shadow-xl border border-premium-dark hover:-translate-y-2 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-gold text-white rounded-xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M8 10h.01"></path><path d="M16 10h.01"></path><path d="M8 14h.01"></path><path d="M16 14h.01"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 text-white">Nasi Box & Daily</h3>
+                    <ul class="space-y-4 mb-8 text-gray-400">
+                        <li class="flex justify-between items-center">
+                            <span>Nasi Box Premium</span>
+                            <span class="font-bold text-white text-sm">Rp38rb - 68rb</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Nasi Besek</span>
+                            <span class="font-bold text-white text-sm">Mulai Rp42.000</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Coffee Break</span>
+                            <span class="font-bold text-white text-sm">Rp27.750/pax</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-gold font-bold flex items-center gap-2">Konsultasi <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+                </div>
+
+                <!-- Custom Events -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-premium-light text-premium-dark rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4">School & Private</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Layanan khusus untuk katering sekolah dan acara perorangan dengan menu yang bisa disesuaikan budget dan kebutuhan nutrisi.
+                    </p>
+                    <a href="#contact" class="text-gold font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform">Pelajari Lebih Lanjut <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold font-semibold tracking-[0.2em] text-sm uppercase mb-4 block">Signature Menu</span>
+                <h2 class="font-serif text-4xl">Koleksi Cita Rasa Terbaik Kami</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Buffet -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="font-serif text-xl border-b border-gold pb-2 inline-block">Buffet Utama</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li>Nasi Goreng Singapore</li>
+                        <li>Beef Black Pepper</li>
+                        <li>Beef Teriyaki</li>
+                        <li>Daging Rendang</li>
+                        <li>Ayam Kodok</li>
+                        <li>Dory Saus Lemon</li>
+                    </ul>
+                </div>
+                <!-- Stall -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="font-serif text-xl border-b border-gold pb-2 inline-block">Gubukan (Stall)</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li>Empal Gentong</li>
+                        <li>Mie Kocok Bandung</li>
+                        <li>Tom Yum</li>
+                        <li>Dimsum & Kebab</li>
+                        <li>Fish n Chips</li>
+                    </ul>
+                </div>
+                <!-- Dessert -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="font-serif text-xl border-b border-gold pb-2 inline-block">Dessert</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li>Aneka Puding Premium</li>
+                        <li>Salad Bangkok</li>
+                        <li>Buah Potong Segar</li>
+                        <li>Ice Cream Selection</li>
+                    </ul>
+                </div>
+                <!-- Drinks -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="font-serif text-xl border-b border-gold pb-2 inline-block">Minuman</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li>Es Leci Tea</li>
+                        <li>Kopi & Teh</li>
+                        <li>Aneka Jus Buah</li>
+                        <li>Infused Water</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+                <div class="overflow-hidden rounded-xl h-48" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c170db06?q=80&w=600&auto=format&fit=crop" alt="Menu 1" class="w-full h-full object-cover hover:scale-110 transition-duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl h-48" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?q=80&w=600&auto=format&fit=crop" alt="Menu 2" class="w-full h-full object-cover hover:scale-110 transition-duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl h-48" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=600&auto=format&fit=crop" alt="Menu 3" class="w-full h-full object-cover hover:scale-110 transition-duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl h-48" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=600&auto=format&fit=crop" alt="Menu 4" class="w-full h-full object-cover hover:scale-110 transition-duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-premium-dark text-white pt-24 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 mb-16">
+                <div data-aos="fade-right">
+                    <h2 class="font-serif text-4xl mb-8">Siap Membuat Acara Anda Berkesan?</h2>
+                    <p class="text-gray-400 mb-8 max-w-md">
+                        Hubungi kami untuk konsultasi menu dan penawaran terbaik yang sesuai dengan kebutuhan acara Anda.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="text-gold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <h5 class="font-bold">Alamat Kantor</h5>
+                                <p class="text-gray-400 text-sm">Jl. Syahbandar No.11, Caringin, Kec. Bandung Kulon</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-gold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </div>
+                            <div>
+                                <h5 class="font-bold">Email & WhatsApp</h5>
+                                <p class="text-gray-400 text-sm">info@mirantycatering.com <br> +62 812-XXXX-XXXX</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-gold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <div>
+                                <h5 class="font-bold">Jam Operasional</h5>
+                                <p class="text-gray-400 text-sm">Senin – Sabtu (09.00 – 15.30) <br> Minggu (Khusus Pengiriman Acara)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10" data-aos="fade-left">
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-wider text-gray-400">Nama</label>
+                                <input type="text" class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all" placeholder="Nama Lengkap">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-wider text-gray-400">Telepon</label>
+                                <input type="text" class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all" placeholder="0812...">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase tracking-wider text-gray-400">Jenis Acara</label>
+                            <select class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all appearance-none">
+                                <option class="bg-premium-dark">Pernikahan</option>
+                                <option class="bg-premium-dark">Instansi Pemerintah</option>
+                                <option class="bg-premium-dark">Acara Sekolah</option>
+                                <option class="bg-premium-dark">Private Party</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase tracking-wider text-gray-400">Pesan</label>
+                            <textarea class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all h-32" placeholder="Detail acara Anda..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-gold text-white font-bold rounded-lg hover:bg-gold-dark transition-all shadow-lg shadow-gold/20">Kirim Permintaan</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-12 flex flex-col md:row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center text-white font-serif text-sm font-bold">M</div>
+                    <span class="font-serif text-lg font-bold tracking-tight">Miranty <span class="text-gold">Catering</span></span>
+                </div>
+                <p class="text-gray-500 text-sm">&copy; 2026 CV. Miranty. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors">Instagram</a>
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
