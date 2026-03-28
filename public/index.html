@@ -15,14 +15,14 @@
     <meta property="og:url" content="https://mirantycatering.com/">
     <meta property="og:title" content="Miranty Catering | Gourmet Premium Bandung">
     <meta property="og:description" content="Sajian gourmet berkelas untuk momen prestisius Anda. Berpengalaman lebih dari 30 tahun melayani ribuan acara di Bandung.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:image" content="https://mirantycatering.com/src/img/logo/miranty-logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mirantycatering.com/">
     <meta property="twitter:title" content="Miranty Catering | Gourmet Premium Bandung">
     <meta property="twitter:description" content="Sajian gourmet berkelas untuk momen prestisius Anda. Berpengalaman lebih dari 30 tahun melayani ribuan acara di Bandung.">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=crop">
+    <meta property="twitter:image" content="https://mirantycatering.com/src/img/logo/miranty-logo.png">
 
     <!-- Google Fonts: Playfair Display & Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -41,10 +41,10 @@
 
     <!-- Sidebar (Mobile) -->
     <div id="sidebar-overlay" class="fixed inset-0 bg-black/60 z-[60] opacity-0 invisible transition-all duration-500 backdrop-blur-sm"></div>
-    <aside id="sidebar" class="fixed top-0 right-0 w-[85%] max-w-[400px] h-full bg-white z-[70] translate-x-full shadow-[-20px_0_50px_rgba(0,0,0,0.1)] p-10 flex flex-col">
+    <aside id="sidebar" class="fixed top-0 right-0 w-[85%] max-w-[320px] h-full bg-white z-[70] translate-x-full shadow-[-20px_0_50px_rgba(0,0,0,0.1)] p-8 flex flex-col overflow-y-auto">
         <div class="flex justify-between items-center mb-16">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg shadow-secondary/20">M</div>
+                <img src="src/img/logo/miranty-logo.png" alt="Miranty Logo" class="w-10 h-10 object-contain">
                 <span class="font-serif text-2xl font-bold text-primary">Miranty</span>
             </div>
             <button id="close-sidebar" class="text-primary hover:rotate-90 transition-transform duration-500 p-2">
@@ -69,16 +69,16 @@
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 transition-all duration-500 py-6" id="navbar">
-        <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="max-w-[1400px] mx-auto px-6 flex justify-between items-center">
             <!-- Logo Section -->
-            <div class="flex items-center gap-4 group cursor-pointer">
+            <div class="flex items-center gap-4 group cursor-pointer" onclick="location.href='#home'">
                 <div class="relative">
-                    <div class="w-14 h-14 bg-secondary rounded-2xl flex items-center justify-center text-white font-serif text-3xl font-bold group-hover:rotate-[360deg] transition-transform duration-1000 shadow-xl shadow-secondary/20 relative z-10">M</div>
+                    <img src="src/img/logo/miranty-logo.png" alt="Miranty Logo" class="w-16 h-16 object-contain group-hover:rotate-[360deg] transition-transform duration-1000 relative z-10">
                     <div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-lg group-hover:blur-xl transition-all"></div>
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-serif text-2xl font-bold tracking-tight text-primary leading-tight">Miranty <span class="text-secondary">Catering</span></span>
-                    <span class="text-[10px] uppercase tracking-[0.5em] text-primary/30 font-black">Est. 1991</span>
+                    <span class="font-serif text-2xl font-bold tracking-tight text-primary leading-tight">Miranty</span>
+                    <span class="text-[10px] uppercase tracking-[0.5em] text-primary/30 font-black">Gourmet</span>
                 </div>
             </div>
             
@@ -230,10 +230,10 @@
                                 <span class="font-serif text-2xl font-bold">Rp144k</span>
                             </div>
                         </div>
-                        <a href="#contact" class="flex items-center gap-4 text-primary font-black text-xs uppercase tracking-widest group-hover:text-secondary transition-all">
+                        <button onclick="location.href='#contact'" class="w-full py-5 bg-primary text-white rounded-2xl font-bold tracking-widest text-xs uppercase hover:bg-secondary transition-all animate-pulse-cta flex items-center justify-center gap-3">
                             PESAN SEKARANG
-                            <i class="fa-solid fa-arrow-right-long group-hover:translate-x-3 transition-transform"></i>
-                        </a>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -255,10 +255,10 @@
                                 <span class="font-serif text-2xl font-bold text-accent">Rp42k</span>
                             </div>
                         </div>
-                        <a href="#contact" class="flex items-center gap-4 text-accent font-black text-xs uppercase tracking-widest hover:text-white transition-all">
+                        <button onclick="location.href='#contact'" class="w-full py-5 bg-secondary text-white rounded-2xl font-bold tracking-widest text-xs uppercase hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-3">
                             KONSULTASI MENU
-                            <i class="fa-solid fa-arrow-right-long group-hover:translate-x-3 transition-transform"></i>
-                        </a>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -270,10 +270,10 @@
                         </div>
                         <h3 class="font-serif text-4xl mb-8 text-primary">School & <br><span class="text-accent">Government</span></h3>
                         <p class="text-primary/40 text-lg mb-12 leading-relaxed">Kemitraan jangka panjang untuk penyediaan katering harian dengan standar nutrisi ketat dan rasa yang konsisten.</p>
-                        <a href="#contact" class="flex items-center gap-4 text-primary font-black text-xs uppercase tracking-widest group-hover:text-accent transition-all">
+                        <button onclick="location.href='#contact'" class="w-full py-5 border-2 border-primary text-primary rounded-2xl font-bold tracking-widest text-xs uppercase hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-3">
                             LIHAT DETAIL
-                            <i class="fa-solid fa-arrow-right-long group-hover:translate-x-3 transition-transform"></i>
-                        </a>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -345,7 +345,7 @@
 
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
-                <!-- Buffet -->
+                <!-- Buffet Utama -->
                 <div data-aos="fade-up" data-aos-delay="100">
                     <h4 class="font-serif text-2xl text-primary mb-10 flex items-center gap-4">
                         <span class="w-8 h-[2px] bg-secondary"></span>
@@ -407,7 +407,7 @@
     <!-- Menu Modal -->
     <div id="menu-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-primary/95 hidden transition-all duration-500 opacity-0">
         <div class="bg-white rounded-[3rem] overflow-hidden max-w-4xl w-full relative transform scale-90 transition-all duration-500 shadow-2xl">
-            <button id="close-menu-modal" class="absolute top-8 right-8 z-20 bg-primary/10 text-primary w-14 h-14 rounded-2xl flex items-center justify-center hover:bg-secondary hover:text-white transition-all duration-500">
+            <button id="close-menu-modal" class="absolute top-8 right-8 z-10 bg-primary/10 text-primary w-14 h-14 rounded-2xl flex items-center justify-center hover:bg-secondary hover:text-white transition-all duration-500">
                 <i class="fa-solid fa-xmark text-2xl"></i>
             </button>
             <div class="flex flex-col lg:flex-row">
@@ -416,7 +416,7 @@
                     <span class="text-secondary font-black tracking-[0.4em] text-[10px] uppercase mb-4 block">Selected Menu</span>
                     <h3 id="modal-title" class="font-serif text-5xl text-primary mb-6"></h3>
                     <p class="text-primary/40 text-lg leading-relaxed mb-8">Kualitas bahan baku terbaik dengan teknik memasak profesional untuk memastikan cita rasa yang tak terlupakan.</p>
-                    <a href="#contact" class="px-10 py-5 bg-primary text-white rounded-2xl font-bold tracking-widest text-xs text-center hover:bg-secondary transition-all">RESERVASI SEKARANG</a>
+                    <button onclick="location.href='#contact'" class="px-10 py-5 bg-primary text-white rounded-2xl font-bold tracking-widest text-xs text-center hover:bg-secondary transition-all">RESERVASI SEKARANG</button>
                 </div>
             </div>
         </div>
@@ -431,33 +431,59 @@
                     <h2 class="font-serif text-6xl lg:text-7xl text-primary mb-12 leading-[1.1]">Rencanakan <br><span class="italic font-normal text-secondary">Momen</span> Anda</h2>
                     
                     <div class="grid sm:grid-cols-2 gap-12 mb-16">
-                        <div class="group">
-                            <h5 class="text-primary font-black uppercase tracking-[0.2em] text-[10px] mb-4 group-hover:text-secondary transition-colors">JAM OPERASIONAL</h5>
-                            <p class="text-primary/60 leading-relaxed font-bold">Senin – Sabtu: <span class="text-primary">09.00 – 15.30</span> <br> Minggu: <span class="text-secondary">Khusus Acara</span></p>
+                        <div class="group" data-aos="fade-up" data-aos-delay="100">
+                            <h5 class="text-primary font-black uppercase tracking-[0.2em] text-[10px] mb-4 group-hover:text-secondary transition-colors flex items-center gap-2">
+                                <span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+                                JAM OPERASIONAL
+                            </h5>
+                            <div class="bg-secondary/10 p-6 rounded-[2rem] border-2 border-secondary/20 group-hover:border-secondary/50 transition-all duration-500 shadow-lg shadow-secondary/5">
+                                <p class="text-primary text-sm leading-relaxed font-bold mb-2 flex justify-between">
+                                    <span>Senin – Sabtu</span>
+                                    <span class="text-secondary font-black bg-white px-3 py-1 rounded-lg shadow-sm">09.00 – 15.30</span>
+                                </p>
+                                <p class="text-primary/60 text-xs leading-relaxed font-bold flex justify-between items-center">
+                                    <span>Minggu</span>
+                                    <span class="text-primary font-black italic px-3 py-1 bg-white/50 rounded-lg">Khusus Acara</span>
+                                </p>
+                            </div>
                         </div>
-                        <div class="group">
-                            <h5 class="text-primary font-black uppercase tracking-[0.2em] text-[10px] mb-4 group-hover:text-secondary transition-colors">EMAIL RESMI</h5>
-                            <p class="text-primary/60 leading-relaxed font-bold">info@mirantycatering.com <br> marketing@miranty.com</p>
+                        <div class="group" data-aos="fade-up" data-aos-delay="200">
+                            <h5 class="text-primary font-black uppercase tracking-[0.2em] text-[10px] mb-4 group-hover:text-accent transition-colors flex items-center gap-2">
+                                <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+                                EMAIL RESMI
+                            </h5>
+                            <div class="bg-accent/10 p-6 rounded-[2rem] border-2 border-accent/20 group-hover:border-accent/50 transition-all duration-500 shadow-lg shadow-accent/5">
+                                <p class="text-primary text-sm leading-relaxed font-bold mb-2 flex items-center gap-3">
+                                    <i class="fa-solid fa-envelope text-accent"></i>
+                                    info@mirantycatering.com
+                                </p>
+                                <p class="text-primary/60 text-xs leading-relaxed font-bold flex items-center gap-3">
+                                    <i class="fa-solid fa-paper-plane text-accent/40"></i>
+                                    marketing@miranty.com
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="space-y-6">
-                        <a href="https://wa.me/628120000000" target="_blank" class="flex items-center gap-6 p-6 rounded-3xl bg-primary/5 hover:bg-primary hover:text-white transition-all duration-500 group">
-                            <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center group-hover:bg-secondary transition-all">
-                                <i class="fa-brands fa-whatsapp text-3xl"></i>
+                        <a href="https://wa.me/628120000000" target="_blank" class="flex items-center gap-6 p-8 rounded-[2.5rem] bg-secondary text-white shadow-2xl shadow-secondary/20 hover:scale-[1.02] transition-all duration-500 group relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-[4rem] transition-all group-hover:w-40 group-hover:h-40"></div>
+                            <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-all">
+                                <i class="fa-brands fa-whatsapp text-4xl text-secondary"></i>
                             </div>
-                            <div>
-                                <p class="text-[10px] font-black uppercase tracking-widest text-primary/40 group-hover:text-white/40">WhatsApp Business</p>
-                                <p class="text-xl font-bold">+62 812-XXXX-XXXX</p>
+                            <div class="relative z-10">
+                                <p class="text-[10px] font-black uppercase tracking-[0.3em] text-white/60 mb-1">Pesan via WhatsApp</p>
+                                <p class="text-2xl font-bold">+62 812-XXXX-XXXX</p>
                             </div>
                         </a>
-                        <a href="#" target="_blank" class="flex items-center gap-6 p-6 rounded-3xl bg-secondary/5 hover:bg-secondary hover:text-white transition-all duration-500 group">
-                            <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center group-hover:bg-primary transition-all">
-                                <i class="fa-brands fa-instagram text-3xl"></i>
+                        <a href="#" target="_blank" class="flex items-center gap-6 p-8 rounded-[2.5rem] bg-primary text-white shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-all duration-500 group relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-[4rem] transition-all group-hover:w-40 group-hover:h-40"></div>
+                            <div class="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-all">
+                                <i class="fa-brands fa-instagram text-4xl text-white"></i>
                             </div>
-                            <div>
-                                <p class="text-[10px] font-black uppercase tracking-widest text-secondary/40 group-hover:text-white/40">Instagram Profile</p>
-                                <p class="text-xl font-bold">@mirantycatering</p>
+                            <div class="relative z-10">
+                                <p class="text-[10px] font-black uppercase tracking-[0.3em] text-white/60 mb-1">Follow Instagram</p>
+                                <p class="text-2xl font-bold">@mirantycatering</p>
                             </div>
                         </a>
                     </div>
@@ -471,7 +497,7 @@
                         </iframe>
                         <a href="https://maps.app.goo.gl/yLzY4V8S7K1ZfG8r8" target="_blank" class="absolute bottom-10 left-10 right-10 glass p-8 rounded-[2.5rem] shadow-2xl flex items-center justify-between group-hover:bg-primary group-hover:text-white transition-all duration-700">
                             <div>
-                                <p class="text-[10px] uppercase font-black tracking-widest text-primary/40 group-hover:text-white/40 mb-2">Office Address</p>
+                                <p class="text-[10px] uppercase font-black tracking-widest text-primary/40 group-hover:text-white/40 mb-2 text-highlight">Office Address</p>
                                 <p class="font-bold text-lg">Jl. Syahbandar No.11, Bandung</p>
                             </div>
                             <div class="w-14 h-14 bg-secondary text-white rounded-2xl flex items-center justify-center shadow-xl shadow-secondary/20">
@@ -491,16 +517,16 @@
             <div class="grid lg:grid-cols-4 gap-20 mb-32">
                 <div class="lg:col-span-2">
                     <div class="flex items-center gap-4 mb-10">
-                        <div class="w-16 h-16 bg-secondary text-white rounded-2xl flex items-center justify-center font-serif text-3xl font-bold shadow-2xl shadow-secondary/20">M</div>
+                        <img src="src/img/logo/miranty-logo.png" alt="Miranty Logo" class="w-16 h-16 object-contain">
                         <span class="font-serif text-4xl font-bold">Miranty <span class="text-secondary">Catering</span></span>
                     </div>
                     <p class="text-white/40 text-xl max-w-md leading-relaxed font-light mb-12">
                         Menghadirkan standar baru dalam industri jasa boga. Kualitas, konsistensi, dan dedikasi untuk setiap hidangan yang kami sajikan.
                     </p>
                     <div class="flex gap-6">
-                        <a href="#" class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all duration-500"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all duration-500"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all duration-500"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all duration-500"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all duration-500"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all duration-500"><i class="fa-brands fa-whatsapp text-xl"></i></a>
                     </div>
                 </div>
                 <div>

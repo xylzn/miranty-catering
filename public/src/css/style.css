@@ -8,8 +8,12 @@
     --white: #ffffff;
 }
 
-html {
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden; /* Force hide horizontal scroll */
     scroll-behavior: smooth;
+    position: relative;
 }
 
 body {
@@ -17,6 +21,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--neutral);
     color: var(--primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure no element overflows */
+* {
+    box-sizing: border-box;
 }
 
 /* Custom Scrollbar */
@@ -56,6 +67,7 @@ body {
     white-space: nowrap;
     position: relative;
     padding: 1.5rem 0;
+    width: 100%;
 }
 
 .marquee-content {
@@ -131,10 +143,30 @@ body {
     box-shadow: 0 30px 60px rgba(26, 28, 32, 0.1);
 }
 
+/* Pulse Animation for CTA Buttons - Enhanced */
+@keyframes pulse-premium {
+    0% { 
+        box-shadow: 0 0 0 0 rgba(165, 198, 149, 0.6);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 0 20px rgba(165, 198, 149, 0);
+        transform: scale(1.02);
+    }
+    100% { 
+        box-shadow: 0 0 0 0 rgba(165, 198, 149, 0);
+        transform: scale(1);
+    }
+}
+
+.animate-pulse-cta {
+    animation: pulse-premium 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 /* Interactive Badge Fix */
 .badge-fix {
     position: absolute;
-    bottom: 2rem;
+    bottom: -1rem; /* Lowered significantly as requested */
     left: -2rem;
     z-index: 30;
 }
@@ -155,10 +187,14 @@ body {
     border-left-width: 4px;
 }
 
-/* Modal Styling Improvements - Optimized for Efficiency */
+/* Modal Styling Improvements - Optimized for Efficiency & No Overflow */
 #menu-modal {
     transition: opacity 0.4s ease, visibility 0.4s ease;
     visibility: hidden;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
 }
 
 #menu-modal.active {
@@ -169,9 +205,14 @@ body {
 #menu-modal > div {
     transform: scale(0.95);
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    max-height: 90vh;
+    max-height: 85vh;
+    width: 100%;
+    max-width: 850px;
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Contain children */
+    border-radius: 2.5rem;
+    background: white;
 }
 
 #menu-modal.active > div {
@@ -180,46 +221,49 @@ body {
 
 .modal-body {
     overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    padding: 2.5rem;
 }
 
-.modal-body::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
-}
-
-/* Custom Animation for Sections */
-[data-aos] {
-    transition-duration: 1000ms !important;
-}
-
-/* Typography Enhancements */
-.font-serif {
-    font-family: 'Playfair Display', serif;
-}
-
-.font-sans {
-    font-family: 'Inter', sans-serif;
+#modal-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
 }
 
 /* Responsive Fixes */
 @media (max-width: 768px) {
+    #navbar .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    #menu-modal {
+        padding: 1rem;
+    }
+    
     #menu-modal > div {
-        width: 95% !important;
-        margin: 0 auto;
+        max-height: 90vh;
+        border-radius: 2rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
     }
     
     #modal-image {
-        height: 200px !important;
-        width: 100%;
+        max-height: 250px;
     }
     
-    .p-12 {
+    .badge-fix {
+        bottom: -2.5rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 220px;
         padding: 1.5rem !important;
-    }
-    
-    #modal-title {
-        font-size: 2rem !important;
-        margin-bottom: 0.5rem !important;
+        transform: translateY(0);
+        text-align: center;
     }
 }
 
@@ -227,11 +271,5 @@ body {
     .marquee-item {
         width: 260px;
         height: 300px;
-    }
-    .badge-fix {
-        bottom: 1rem;
-        left: -1rem;
-        max-width: 200px;
-        padding: 1.5rem !important;
     }
 }
